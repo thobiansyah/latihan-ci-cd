@@ -1,14 +1,16 @@
 install:
-	go mod tidy
+	@go mod tidy
 
 lint:
-	go fmt ./...
+	@go fmt ./...
 
 test: install
-	go test -v ./...
+	@go test -v ./...
 
 build: install
-	go build -v .
+	@go build -v .
 
 run: install
-	go run main.go
+	@go run main.go
+lint:
+	@go fmt ./...
